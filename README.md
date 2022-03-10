@@ -1,24 +1,4 @@
 # README
+It is an educatinal app which you can test single page reactive app. You can reach : https://turbostream.herokuapp.com
+o App uses Rails 7, Hotwire Turbo (stream) , broadcasting,  scaffold crud, PostgreSQL and SimpleCSS.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
