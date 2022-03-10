@@ -1,0 +1,22 @@
+<%= form_with(model: message, data: { controller: "reset_messages", action: "turbo:submit-end->reset_messages_form#reset"}) do |form| %> 
+<%#reset_messages_controller.js e atıfta bulunduk. stimulus ile aksiyonlu mesaj ekleme yaptık gibi%>
+  <% if message.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(message.errors.count, "error") %> prohibited this message from being saved:</h2>
+
+      <ul>
+        <% message.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.text_area :body %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+<%= Time.zone.now.localtime.strftime('%a, %d %b %Y %H:%M:%S')%>
+<div id="notice1">
+  <%=notice%>
+</div>
+
+<h1><span id="sayi_revize"><%=Message.count %></span> Messages</h1>
+
+<%= turbo_stream_from "inbox_list" %> <%#bunu broadcast için ekledim corsego forumdan%>
+<div id="message_body_form">
+  <%= render partial: "messages/form", locals: { message: Message.new } %>
+</div>
+<div id="messages">
+  <% @messages.each do |message| %>
+    <%= render message %>    
+  <% end %>
+</div>
+

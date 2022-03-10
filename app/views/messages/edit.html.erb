@@ -1,0 +1,11 @@
+<h1>Editing message</h1>
+<%= turbo_frame_tag "mesaj_edit" do %>
+    <%= render "form", message: @message %>
+<% end %>
+
+<br>
+
+<div>
+  <%= link_to "Show this message", @message %> |
+  <%= link_to "Back to messages", messages_path %>
+</div>

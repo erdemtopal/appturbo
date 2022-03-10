@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Turboapp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+
+    <div>
+        <details>
+        <summary>About APP!</summary>
+        <p><small>Hi I'm Erdem TOPAL. This is a reactive single page example. You can find the codes in: <a href="https://github.com/erdemtopal/turboapp">My github page for turboapp</a></small>
+        <small>In this App, i used  Hotwire Turbo (stream feature) for reactive html tags which interacting backend controller of rails. CSS is based on simplecss.org. You can reach me via erdemtopals@gmail.com</small></p>
+      </details>
+    <%= yield %>
+    
+    </div>
+  </body>
+</html>
+
+
+

@@ -1,0 +1,16 @@
+<div id="<%= dom_id message %>"> <!--bundan dolayı her bir oluşturulan div ayrı ID'de üretiliyor.  -->
+ 
+  <%= turbo_frame_tag "mesaj_edit" do %>
+  <blockquote>
+    <p>
+    <strong>Message:</strong>
+    <%= message.body %><br/>  
+    </p>
+    <p><cite><%=message.created_at.localtime.strftime('%a, %d %b %Y %H:%M:%S') %></cite></p>
+    <%= link_to "Edit message", edit_message_path(message) %>
+    <%= button_to "Delete message", message, method: :delete%>
+   </blockquote> 
+   <% end %>
+</div>
+
+
